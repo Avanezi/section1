@@ -25,16 +25,14 @@ html{
     line-height: .5em;
     font-family : 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
    
-    font : italic normal bold 20px/1.5 Times, "Times New Roman", Georgia, serif;
+    font : normal normal normal 20px/1.5 Times, "Times New Roman", Georgia, serif;
    
 
-    color : blue; /* Set text color to blue */
+    /* color : blue; Set text color to blue */
 }
 body{
-
-    width : 100%;
-    max-width: 1250px;  
-  
+    width : 100%; /*% relative to parent element*/
+    max-width : 1300px; /*absolute units px*/
     margin : auto; /*margin set to auto for right and left center elemnts inside their parent*/
     padding : 0.25rem; /*rem releative to root element font size*/
 
@@ -79,15 +77,15 @@ p{
 }
 /*RGBA alpha*/
 p{
-   /* color : rgba(255, 99, 71, 0.9);*/
+    color : rgba(255, 99, 71, 0.9);
 }
 /*HSL hue saturation lightness*/
 p{
-   /* color : hsl(341, 50%, 50%);*/
+    color : hsl(341, 50%, 50%);
 }
 /*HSLA alpha*/
 p{
-   /* color : hsla(9, 100%, 64%, 0.6);*/
+    color : hsla(9, 100%, 64%, 0.6);
 }
 /*Child combinator selector*/
 section > p{
@@ -115,14 +113,12 @@ h1, h2, .headings{
 }
 /*Multiple Elements and Selectors*/
 header, footer{
-
-   /* width : 50vw;
-    height : 30vh;*/
-
-    color: black;
     background-image: linear-gradient(lightpink 50%, rgb(241, 241, 174));
-
-
+    margin : .25rem;
+    padding : .25rem;
+   /* width : 50vw; /*set width with viewport units*/
+     /* height : 30vh;set height with viewport units*/    
+        /*applies a gradient background colour*/
  /*  background-image: linear-gradient(to bottom right, red,orange,yellow,green,blue,indigo,violet);*/
    /* background-image: linear-gradient(orange 30%,white 40%, green 30%);
 */
@@ -131,93 +127,180 @@ header, footer{
 
     background-color: hsla(202, 17%, 64%, 0.6);
 }
+/*
 .main-section-figure {
-    width : 80%;
-    height : 80%;
-    text-align : center;
+    width : 80%; /*set width to 80% of the parent element*/
+    /* height : 80%; set height to 80% of the parent element*/
+  /*  text-align : center;
     margin : auto;
-}
+}*/
 .main-section-figure img{
 
-    width : 80%;
-    height : 80%;
-    border-radius: 1.5rem;   
-    padding : 1rem;
+    width : 80%; /*set width to 80% of the parent element*/
+    height : 80%; /*set height to 80% of the parent element*/
+     /*rounds the corners of the border
+    border-radius*/
+    /*border radius must be larder than then padding*/
+    border-radius: 1.5rem;   /*relevative to the root units*/ 
+    padding : 1rem; /*sets padding useing units relevative to the root units*/
 }
 #absolute-path-image{
 
-    background-color: hsla(291, 13%, 58%, 0.6);
-    border : .25rem solid rgb(74, 39, 89);
+    background-color: hsla(291, 13%, 58%, 0.6); /*applies background colour*/
+     /*border shorthand property width, style colour */ 
+    border : .25rem solid rgb(74, 39, 89); /*relevative to the root units*/
+      /*rounds the corners of the border
+    border-radius*/
     border-radius : 1rem; 
-    color : rgb(74, 39, 89);
+    color : rgb(74, 39, 89); /*applies background colour*/
 }
-#relative-path-image{
 
-    background-color: hsla(291, 13%, 58%, 0.6);
-    border : .25rem solid rgb(245, 145, 205);
+
+
+
+/*id selector for the blockquote with the id of quote*/
+#quote{
+ /*border shorthand property width, style colour */
+    border : 1rem solid green;
+    /* Specify a horizontal and a vertical shadow colour*/
+    box-shadow : .25rem .25rem .25rem black;
+    #relative-path-image{
+
+        background-color: hsla(291, 13%, 58%, 0.6); /*applies background colour*/
+        border : .25rem solid rgb(245, 145, 205); /*border shorthand property width, style colour */ 
+         /*rounds the corners of the border
+        border-radius*/
+        border-radius : 1rem; 
+        color :  rgb(51, 9, 34);
+    }}
+
+aside ul{
+    list-style-type: square;
+    list-style-type: circle;
+    list-style-type: disc;
+    list-style-type: none;
+}
+aside ol{
+    list-style-type: lower-alpha;
+    list-style-type: upper-alpha;
+    list-style-type: lower-roman;
+}
+nav {
+    background-color: palevioletred;
+    padding : .25rem;
+    margin : .25rem;
+}
+nav ul{
+    text-align: center;
+    list-style-type: none;
+    padding: 0 1rem 2rem 1rem ;
+    margin : 0.25rem;
+}
+nav ul li a{
+    background-color: white;
+    border: 0.1rem solid purple;
+    display : block;
+    text-decoration: none;
+    color: purple;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+nav ul li a:hover{
+    background-color: purple;
+    border-color: white; 
+    color: white;
+}
+#home-link{
+    float : left;
+    width : 50%;
+
+}
+#contact-link{
+    float : right;
+    width : 50%;
+}
+
+main{
+    clear : both;
+    margin : .25rem;
+    padding : .25rem;
+    float : left;
+    width : 65%;
+}
+aside{
+    margin : .25rem;
+    float : right;
+    padding : .25rem;
+    width : 25%;
+}
+footer{
+    clear : both;
+}
+#bio{
+    float : left;
+    width : 45%;
+}
+
+#relative-path-image{
+    float : right;
+    width : 35%;
+    background-color: hsla(291, 13%, 58%, 0.6); /*applies background colour*/
+    border : .1rem solid rgb(245, 145, 205); /*border shorthand property width, style colour */ 
+     /*rounds the corners of the border
+    border-radius*/
     border-radius : 1rem; 
     color :  rgb(51, 9, 34);
 }
-
-.main-section p{
-
-    color : #22063c;
+.main-section{
+    clear: both;
 }
-/*id selector*/
-#header-heading{
-
-    color :black;
+table, th, td{
+    border : .25rem solid black;
 }
-div{
+input[type=text]{
+    width : 100%;
+}
+#gender_radio{
+    border : none;
+    padding : 0px;
+}
+input[type=text], input[type=email], textarea, select{
+    width : 100%;
+}
+input[type=radio]{
+    width : 2rem;
+    height : 2rem;
+}
+label, legend{
+    font-size: 1.5rem;
+    font-variant: small-caps;
+    color :rgb(51, 9, 34);
+    font-weight: bolder;
+}
 
-    margin-top : 1rem;
-    margin-bottom : .5rem;
-    margin-left : 1.5rem;
-    margin-right : 2rem;
-
-    margin : 1rem;
-    margin : 1rem .5rem;
-    margin : 1rem .5rem 1.5rem;
-    margin : 1rem 2rem .5rem .5rem;
-
-    padding-top : 1rem;
-    padding-bottom : .5rem;
-    padding-left : 1.5rem;
-    padding-right : 2rem;
-
-    padding : 1rem;
-    padding : 1rem .5rem;
-    padding : 1rem .5rem 1.5rem;
-    padding : 1rem 2rem .5rem .5rem;
-
-    border-style : dashed; 
-    border-width : 0.25rem;
-    border-color :rgb(110, 11, 93);
-
-    /*sets the styleof the border*/
-    border-top-style: solid;
-    border-bottom-style : double;
-    border-right-style : dotted;
-    border-left-style : dashed;
-
-     /*sets the width of the border*/
-     border-top-width: 1.5rem;
-     border-bottom-width : 1.25rem;
-     border-right-width: .5rem;
-     border-left-width : .25rem;
-
-       /*sets the color of the border*/
-    border-top-color: red;
-    border-bottom-color : green;
-    border-right-color: blue;
-    border-left-color : orange ;
-
-     /*border shorthand property width, style colour */ 
-     border : 1rem solid green;
+@media (max-width : 900px){
+    html{
+        font-size : 15px;
+    }
+    #bio,  #relative-path-image {
+        float :none;
+        width : 80%;
+    }
+}
+@media (max-width : 600px){
+    html{
+        font-size : 10px;
+    }
+    #home-link,  #contact-link, main, aside {
+        float : none;
+        width : 100% 
+    }
+    aside{
+        text-align: center;
+    }
+    table{
+        margin : auto;
+    }
    
-}
-#quote{
 
-    border : 1rem solid green;
-    box-shadow : .25rem .25rem .25rem black;
 }

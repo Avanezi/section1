@@ -1,0 +1,291 @@
+<!--Andria Vanezi 78894562  -->
+<!--Section 1 example 1-->
+<!--this is the document type declaration-->
+<!DOCTYPE html>
+<!--This is the html element with the lang attribute specifies the language of the element's content is english-->
+<html lang="en">
+<!--this is the head element-->
+<head>
+    <!--this is metadata defining character set-->
+    <meta charset="UTF-8">
+    <!--this metadata setting the viewport to make a website look good on all devices-->
+    <!-- imporatant for responsive design-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--this metadata defining keywords for search engines-->
+    <!-- imporatant for SEO-->
+    <meta name="keywords" content="south africa,south,africa,html,css,web development,beginner,learning,novice,student">
+    <!--this metadata Defining a description of the web page-->
+    <!-- imporatant for SEO-->
+    <meta name="description" content="This is a site geared to people wanting to lean HTML & CSS.">
+    <!--This is embedded css applied before the external css-->  
+    <style>
+        p {
+            color : blue;/* Set text color to blue */
+        }
+
+    </style>
+    <!--link css files. CSS will be applied from top to bottom-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!--This is embedded css applied after the external css-->
+      <style>
+        /*h1 element selector*/
+        h1{
+            color : pink; /* Set text color to pink */
+        }
+   </style>
+
+    <!--Define a title for your HTML document and a title in the browser toolbar-->
+    <!-- imporatnat for SEO + Accessibility-->
+    <title>HTML & CSS for Beginners</title>
+</head>
+<!--this is the body element that defines the document's body-->
+<body>
+    <!--this is the semantic header element that defines the body's header-->
+    <header>
+         <!--this the most importmant heading element-->
+        <!--this element has a class attribute-->
+        <!--this element has an id  attribute-->
+        <!--this is inline css for the h1 element-->
+        <h1 id="header-heading" class="headings">HTML & CSS for Beginners</h1>
+    </header>
+    <nav>
+        <ul>
+            <li id="home-link"><a href="index.html">Home</a></li>
+            <li id="contact-link"><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <!--this is the semantic main element that defines the body's main-->
+    <main>
+       <h2>Contact</h2>
+       <form name="contact_form" id="contact_form" method="post" action="contact.php" >
+            <div>
+                <input type="hidden" name="userid" value="1234">
+                <input type="hidden" name="honeypot" value="">
+            </div>
+            <div>
+                <label for="disabled">Disabled</label>
+                <input type="text" name="disabled" id="disabled" value="disabled field" disabled>
+                <label for="readonly">Read Only</label>
+                <input type="text" name="readonly" id="readonly" value="readonly field" readonly>
+            
+            </div>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div>
+                    <label for="firstname">First Name</label>
+                    <input type="text" name="firstname" id="firstname" placeholder="Enter your first name" autofocus autocomplete="off" required>
+                </div>
+                <div>
+                    <label for="lastname">Last Name</label>
+                    <input type="text" name="lastname" id="lastname" required >
+                </div>
+                <fieldset id="gender_radio">
+                    <legend>What is your gender?</legend>
+                    <input type="radio" name="gender" id="male" value="male" required >
+                    <label for="male">Male</label><br>
+                
+                   
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">Female</label><br>
+
+                    <input type="radio" name="gender" id="other" value="other">
+                    <label for="other">Other</label><br>
+                </fieldset>
+            </fieldset>
+
+          
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" maxlength="12" size="12">
+            </div>
+            <div>
+                <label for="doc">Documents</label>
+                <input type="file" name="doc" id="doc" multiple>
+            </div>
+            <div>
+                <label for="comment">Comments</label>
+                <textarea name="comment" id="comment" rows="10" cols="50"></textarea>
+            </div>
+            <div>
+             
+                <fieldset>
+                    <legend>What streaming services do you use?</legend>
+                    <label for="netflix">Netflix</label>
+                    <input type="checkbox" name="streaming" id="netflix" value="netflix" >
+                    <label for="disney">Disney</label>
+                    <input type="checkbox" name="streaming" id="disney" value="disney">
+                    <label for="prime">Prime Video</label>
+                    <input type="checkbox" name="streaming" id="prime" value="prime">
+                </fieldset>
+                
+             
+            </div>
+            <div>
+               
+                <label for="month">What month is it?</label>
+                <select name="month" id="month">
+                    <option value="">Select Month</option>
+                    <option value="January">January</option>
+                    <option value="February" >February</option>
+                    <option value="march">March</option>
+                </select>
+            
+             
+            </div>
+            <div>
+                <label for="pet">What pet(s) do you have?</label>
+                <select name="pet" id="pet" multiple size="2">
+                    <option value="cat">Cat</option>
+                    <option value="dog">Dog</option>
+                    <option value="fish">Fish</option>
+                    <option value="bunny">Bunny</option>
+                </select>
+            </div>
+            <div>
+                <label for="stProv">What state or province do you line in ?</label>
+                <select id="stProv" name="stProv">
+                    <option>Select</option>
+                    <optgroup label="State">
+                        <option value="1">Alabama</option>
+                        <option value="2">Alaska</option>
+
+
+                    </optgroup>
+                    <optgroup label="Provinces">
+                        <option value="53">Alberta</option>
+                        <option value="54">Ontario</option>
+
+                    </optgroup>
+
+                </select>
+            </div>
+            <div>
+                <h3>HTML5 elements</h3>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+                <label for="website">Website</label>
+                <input type="url" name="website" id="website"><br>
+                <label for="phone">Phone</label>
+                <input type="tel" name="phone" id="phone"><br>
+                <label for="p">How many pets do you have?</label>
+                <input type="number" name="p" id="p" min="0" max="15" step="3"><br>
+                <label for="dob">What is your date of birth</label>
+                <input type="date" name="dob" id="dob" min="2000-01-01" max="2024-03-14"><br>
+                <label for="week">week</label>
+                <input type="week" name="week" id="week" ><br>
+                <label for="time">time</label>
+                <input type="time" name="time" id="time" ><br>
+                <label for="colour">What is your favourite colour</label>
+                <input type="color" name="colour" id="colour"><br>
+                <label id="html">On a scale of 1 to 10 how much do you Like HTML?</label>
+                <input type="range" name="html" id="html" min="1" max="10" value="5">
+            </div>
+            <div>
+                <label for="robot">I am not a robot</label>
+                <input type="checkbox" name="robot" id="robot" value="true">
+                <input type="reset" id="clear" name="clear" value="Clear Form">
+                <input type="submit" id="submit" name="submit"  value="Contact Us!">
+                <button type="submit" name="bt1" id="bt1">Submit</button>
+                <button type="reset" name="bt2" id="bt2">Reset</button>
+
+            </div>
+  
+         
+          
+           
+
+       </form>
+      
+
+    </main>
+    <aside>
+        <h3>Table</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>one</th>
+                    <th>two</th>
+                    <th>Three</th>
+                    <th>Four</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>data 1</td>
+                    <td>data 2</td>
+                    <td>data 3</td>
+                    <td>data 4</td>
+                </tr>
+                <tr>
+                    <td>data 1</td>
+                    <td>data 2</td>
+                    <td>data 3</td>
+                    <td>data 4</td>
+                </tr>
+                <tr>
+                    <td>data 1</td>
+                    <td>data 2</td>
+                    <td>data 3</td>
+                    <td>data 4</td>
+                </tr>
+                <tr>
+                    <td>data 1</td>
+                    <td>data 2</td>
+                    <td>data 3</td>
+                    <td>data 4</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>total</td>
+                    <td>total</td>
+                    <td>total</td>
+                    <td>total</td>
+                </tr>
+            </tfoot>
+        </table>
+        <h3>Unordered list</h3>
+        <ul>
+            <li>apples</li>
+            <li>oranges</li>
+            <li>pears</li>
+        </ul>
+        <h3>Ordered List</h3>
+        <ol>
+            <li>Monday</li>
+            <li>Tuesday</li>
+            <li>Wednesday</li>
+        </ol>
+        <h3>Description List</h3>
+        <dl>
+            <dt>Name</dt>
+            <dd>Andria Vanezi</dd>
+            <dt>Profession</dt>
+            <dd>Professor</dd>
+            <dt>Employer</dt>
+            <dd>Conestoga College </dd>
+        </dl>
+        <h3>Types of Links</h3>
+        <a href="https://www.youtube.com/?gl=CA" target="_blank">YouTube</a>
+        <br><a href="#main-heading">This is my h2 heading</a>
+        <br><a href="mailto:avanezi@conestogac.on.ca">Email the Professor of Prog1247</a>
+        <br><a href="tel:555-555-5555">Call your Professor</a>
+        <br><a href="documents/Assignment 2 HTML CSS .pdf" target="_blank">Assignment 2</a>
+        <br><a href="documents/CSS Box Model.pptx">Power Point Lesson</a>
+        <br><a href="https://www.youtube.com/?gl=CA" target="_blank" title="Link to YouTube"><img src="images/puppy.webp" width="100" height="100"></a>
+    </aside>
+
+
+    <!--this is the semantic footer element that defines the body's footer-->    
+    <footer>
+        <!--this is character entity - special character-->      
+        <p>&copy;<i><i>Andria Vanezi 2024</i></i> </p>
+        <p>&#169;<i><i>Andria Vanezi 2024</i></i> </p>
+
+    </footer>
+
+
+
+</body>
+</html>

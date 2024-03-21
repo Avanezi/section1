@@ -1,3 +1,4 @@
+
 <!--Andria Vanezi 78894562  -->
 <!--Section 1 example 1-->
 <!--this is the document type declaration-->
@@ -49,16 +50,40 @@
         <!--this is inline css for the h1 element-->
         <h1 id="header-heading" class="headings">HTML & CSS for Beginners</h1>
     </header>
+    <nav>
+        <ul>
+            <li id="home-link"><a href="index.html">Home</a></li>
+            <li id="contact-link"><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
     <!--this is the semantic main element that defines the body's main-->
     <main>
-        <!--this the second most importmant heading element-->
-        <h2 id="main-heading" class="headings">This is my h2 heading</h2>
+        <section class="main-section" >
+            <h2 id="main-heading">Biography</h2>
+            <div>
+                <!--This is a blockquote element has a cite attribute-->             
+                <blockquote id="bio" cite="https://en.wikipedia.org/wiki/Mahatma_Gandhi">
+                    <p><b>Mohandas Karamchand Gandhi</b> (ISO: Mōhanadāsa Karamacaṁda Gāṁdhī[pron 1]&semi; 2 October 1869 - 30 January 1948) was an <em>Indian lawyer</em>, anti-colonial <small><small><small>nationalist</small></small></small> and political ethicist who employed nonviolent resistance to lead the successful campaign for <strong>India&apos;s independence </strong>from British rule. He inspired movements for civil rights and <mark>freedom </mark>across <i>the world</i>. The honorific Mahātmā (from Sanskrit &apos;great-souled, venerable&apos;), <ins>first applied </ins>to him in <del>South Africa</del> in 1914, is now used throughout the world.</p>
+                </blockquote>
+                <figure id="relative-path-image"  class="main-section-figure">
+                    <!--relative path image-->
+                    <img src="images/puppy.webp" alt="A small white and brown puppy wearing sitting on a purple cloth with their tongue out.">
+                    <!--This is a figure caption element-->
+                    <figcaption>My puppy</figcaption>
+                </figure> 
+            </div>
+          
+          
+        </section>
+         
+        <section class="main-section">
+              
+        <h2  class="headings">This is my h2 heading</h2>
         <p>This is my paragraph that is a sibiling with the h2</p>
         <p>This is my paragraph that is another sibiling with the h2</p>
         <p>This is my paragraph that is another sibiling with the h2</p>
       
-        <!--this is a section element nested in the main-->     
-        <section class="main-section">
+        <!--this is a section element nested in the main--> 
             <h3 class="headings">This is my h3 heading</h3>
             <!--this is a paragraph-->
             <p>My cat is very grumpy.</p>
@@ -90,20 +115,7 @@
     
             </section>
         </div>
-        <section class="main-section">
-            <h2>Biography</h2>
-              <!--This is a blockquote element has a cite attribute-->             
-            <blockquote id="bio" cite="https://en.wikipedia.org/wiki/Mahatma_Gandhi">
-                <p><b>Mohandas Karamchand Gandhi</b> (ISO: Mōhanadāsa Karamacaṁda Gāṁdhī[pron 1]&semi; 2 October 1869 - 30 January 1948) was an <em>Indian lawyer</em>, anti-colonial <small><small><small>nationalist</small></small></small> and political ethicist who employed nonviolent resistance to lead the successful campaign for <strong>India&apos;s independence </strong>from British rule. He inspired movements for civil rights and <mark>freedom </mark>across <i>the world</i>. The honorific Mahātmā (from Sanskrit &apos;great-souled, venerable&apos;), <ins>first applied </ins>to him in <del>South Africa</del> in 1914, is now used throughout the world.</p>
-            </blockquote>
-            <!--this is a superscript element-->
-            <p>Christmas is on December 25<sup>th</sup>.</p>
-            <!--this is a subscript element-->
-            <p>H<sub>2</sub>O is the period elment for water.</p>
-            <!--This is a an abbreviation element-->
-            <!--this the title attribute-->
-            <abbr title="Search Engine Optimatization">SEO</abbr>
-        </section>
+     
         <section class="main-section">
             <h2>Quote</h2>
             <!--This is a blockquote element has a cite attribute-->
@@ -115,23 +127,18 @@
                 <cite>Ghandi, n.d.</cite>
             </blockquote>
         </section>
-        <section class="main-section">
+       <!-- <section class="main-section">
             <h2>Images</h2>
-            <!--This is a figure element-->
-            <figure id="absolute-path-image" class="main-section-figure">
-                <!--absolute path image-->
+            This is a figure element-->
+           <!-- <figure id="absolute-path-image" class="main-section-figure">
+                absolute path image-->
                 <!--alternative text attribute-->
-                <img src="https://i.pinimg.com/564x/36/b4/ef/36b4ef433ac9c2cf9d34e54aa3a38340.jpg" alt="A small white puppy wearing a pink sweater sittingon the green grass.">
-                 <!--This is a figure caption element-->
-                <figcaption>My puppy</figcaption>
-            </figure>
+              <!--  <img src="https://i.pinimg.com/564x/36/b4/ef/36b4ef433ac9c2cf9d34e54aa3a38340.jpg" alt="A small white puppy wearing a pink sweater sittingon the green grass.">
+                This is a figure caption element-->
+             <!--   <figcaption>My puppy</figcaption>
+            </figure>-->
             <!--This is a figure element-->
-            <figure id="relative-path-image"  class="main-section-figure">
-                  <!--relative path image-->
-                  <img src="images/puppy.webp" alt="A small white and brown puppy wearing sitting on a purple cloth with their tongue out.">
-                   <!--This is a figure caption element-->
-                  <figcaption>My puppy</figcaption>
-            </figure> 
+         
             <!--Do NOT link this way
             <img src="C:\Users\theoa\OneDrive\Documents\Conestoga Courses\Prog1247\W2024\section1\example1\images\puppy.webp" alt="this is an example of how not to link an image">
        -->
@@ -146,14 +153,102 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/ZWK-e80ae9Y?si=NF6FcdZZCPkr58xe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
         </section>
-        <!--This a vector image-->
-        <svg version="1.1" baseProfile="full" width="400" height="200" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100%" height="100%" fill="black" />
-            <circle cx="200" cy="100" r="90" fill="#B69763"/>
-            <circle cx="240" cy="100" r="90" fill="black"/>
-        </svg>
+        <section class="main-section">
+              <!--this is a superscript element-->
+              <p>Christmas is on December 25<sup>th</sup>.</p>
+              <!--this is a subscript element-->
+              <p>H<sub>2</sub>O is the period elment for water.</p>
+              <!--This is a an abbreviation element-->
+              <!--this the title attribute-->
+              <abbr title="Search Engine Optimatization">SEO</abbr>
+            <!--This a vector image-->
+            <svg version="1.1" baseProfile="full" width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="black" />
+                <circle cx="200" cy="100" r="90" fill="#B69763"/>
+                <circle cx="240" cy="100" r="90" fill="black"/>
+            </svg>
+        </section>
+      
 
     </main>
+    <aside>
+        <h3>Table</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>one</th>
+                    <th>two</th>
+                    <th>Three</th>
+                    <th>Four</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>data 1</td>
+                    <td>data 2</td>
+                    <td>data 3</td>
+                    <td>data 4</td>
+                </tr>
+                <tr>
+                    <td>data 1</td>
+                    <td>data 2</td>
+                    <td>data 3</td>
+                    <td>data 4</td>
+                </tr>
+                <tr>
+                    <td>data 1</td>
+                    <td>data 2</td>
+                    <td>data 3</td>
+                    <td>data 4</td>
+                </tr>
+                <tr>
+                    <td>data 1</td>
+                    <td>data 2</td>
+                    <td>data 3</td>
+                    <td>data 4</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>total</td>
+                    <td>total</td>
+                    <td>total</td>
+                    <td>total</td>
+                </tr>
+            </tfoot>
+        </table>
+        <h3>Unordered list</h3>
+        <ul>
+            <li>apples</li>
+            <li>oranges</li>
+            <li>pears</li>
+        </ul>
+        <h3>Ordered List</h3>
+        <ol>
+            <li>Monday</li>
+            <li>Tuesday</li>
+            <li>Wednesday</li>
+        </ol>
+        <h3>Description List</h3>
+        <dl>
+            <dt>Name</dt>
+            <dd>Andria Vanezi</dd>
+            <dt>Profession</dt>
+            <dd>Professor</dd>
+            <dt>Employer</dt>
+            <dd>Conestoga College </dd>
+        </dl>
+        <h3>Types of Links</h3>
+        <a href="https://www.youtube.com/?gl=CA" target="_blank">YouTube</a>
+        <br><a href="#main-heading">This is my h2 heading</a>
+        <br><a href="mailto:avanezi@conestogac.on.ca">Email the Professor of Prog1247</a>
+        <br><a href="tel:555-555-5555">Call your Professor</a>
+        <br><a href="documents/Assignment 2 HTML CSS .pdf" target="_blank">Assignment 2</a>
+        <br><a href="documents/CSS Box Model.pptx">Power Point Lesson</a>
+        <br><a href="https://www.youtube.com/?gl=CA" target="_blank" title="Link to YouTube"><img src="images/puppy.webp" width="100" height="100"></a>
+    </aside>
+
+
     <!--this is the semantic footer element that defines the body's footer-->    
     <footer>
         <!--this is character entity - special character-->      
